@@ -1,0 +1,95 @@
+
+:root{
+  --primary: #8b1d2c;     /* color institucional */
+  --muted: #e5e7eb;       /* texto claro sobre vidrio */
+  --radius: 16px;
+  --shadow: 0 12px 30px rgba(0,0,0,.20);
+}
+
+* { box-sizing: border-box; }
+body{
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Contenedor y grilla */
+.Container{ width: min(1200px, 92%); margin: 0 auto; }
+.Cards{ padding: 56px 0 88px; }
+.Grid{
+  display: grid;
+  gap: 36px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Tarjeta con vidrio borroso (aplica a toda la tarjeta */
+.Card{
+  background: rgba(255,255,255,.12);                 /* transparencia */
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  backdrop-filter: blur(14px) saturate(120%);        /* <- efecto vidrio */
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.Card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.28), 0 4px 10px rgba(0,0,0,.12);
+}
+
+/* Imagen superior */
+.CardImg{
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Cuerpo de la tarjeta (acepta Card_Body y card_body) */
+.CardBody, .CardBody{
+  padding: 22px 22px 26px;
+}
+
+/* Texto sobre vidrio */
+.CardTitle{
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #ffffff;
+}
+.CardText{
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+/* Botón sobre vidrio */
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .6px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  padding: 10px 18px;
+  border-radius: 999px;
+  transition: background .15s ease, color .15s ease, transform .1s ease;
+}
+.btn:hover{
+  background: #ffffff;
+  color: #111827;
+}
+.btn:active{ transform: translateY(1px); }
+
+/* fallback po si el navegador no soporta backdrop-filter */
+@supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))){
+  .Card{
+    background: rgba(255,255,255,.88);
+    border: 1px solid rgba(0,0,0,.06);
+  }
+  .CardTitle{ color:#111827; }
+  .CardText{ color:#374151; }
+  .btn{ border-color: var(--primary); color: var(--primary); }
+  .btn:hover{ background: var(--primary); color: #fff; }
+}
+

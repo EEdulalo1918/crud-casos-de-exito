@@ -1,0 +1,29 @@
+
+.divImagenContainer {
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+}
+
+.divImagenContainer img {
+    width: 250px;
+    height: 160px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    
+}
+
+.imgTabla{
+    border-radius: 20px;
+    width: 80px;
+    height: 45px;
+    opacity: 0.8;
+}
+
+.divFooterImg img{
+    margin:0px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,33 @@
+.NavMenu{
+    background-color: #800404;
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 50px;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 10px black;
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.NavMenu a{
+    text-decoration: none;
+    color: azure;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 15px;
+    
+}
+
+.NavMenu a:hover{
+    background-color: #a31818;
+    border-radius: 40px;
+    border: none;
+    border-bottom: 1px solid white;
+    box-shadow: 0 0 2px white;
+    transition: all 0.4s ease;
+    
+}

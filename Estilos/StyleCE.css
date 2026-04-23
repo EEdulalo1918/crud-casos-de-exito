@@ -1,0 +1,329 @@
+/*main que contiene toda la informacion dentro*/
+.MainContentForm{
+    padding-bottom: 30px;
+    display: grid; /*convierte al contenedor en una cuadricula, lo que permite agrupar elementos hijos en fila y columnas*/
+    place-items: center;/*centra horizontal y verticalmente, pero solo a los elementos hijos*/
+
+}
+
+.divMostrarForm{/*div que contiene al formulario*/
+    width:400px;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/*diseño de los titulos*/
+
+.divTitle1{
+    color: rgb(60, 20, 45);
+    width:300px;
+    background-color:transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 5px wheat;
+}
+
+
+.divTitle2{
+    width:400px;
+    height:50px;
+    background-color:transparent;
+    box-shadow: 0 0 5px wheat;
+    padding-left: 5px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    color: rgb(58, 2, 2);
+    text-align: center;
+}
+
+.frmAgregar{/*formulario */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Diseño de los inputs de Crear*/
+.InputsAgregar {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(54, 51, 51);
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/*diseño de los inputs de crear al hacer click*/
+.InputsAgregar:focus{
+    outline-color:transparent;
+    /* box-shadow: 0 0 5px rgb(173, 166, 152);*/
+    border: none;
+}
+
+/*diseño de los inputs al pasar el mosue*/
+.InputsAgregar:hover{
+    outline-color:transparent;
+    box-shadow: 0 0 5px rgb(221, 219, 214);
+    border-radius: 5px;
+    border-bottom: 1px solid rgb(136, 130, 130);
+}
+
+/*Diseño de los placeholder dentro de los inputs*/
+.InputsAgregar::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+/*Diseño del boton agregar*/
+.btnAgregarSumit{
+    height: 25px;
+    width: auto;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(223, 190, 197);
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.btnAgregarSumit:hover{
+    border-radius: 25px;
+    box-shadow: 0 0 5px wheat;
+    transition: all 0.2s ease;
+}
+
+
+/*Tabla con los usuarios*/
+.TablesInfo{
+    border-spacing: 10px;/*espacion entre celdas de la tabla*/
+    font-family: sans-serif;
+    font-size: 18px;   
+}
+
+/*filas y columnas*/
+th,td{
+    border:none;
+    border-bottom: 1px solid black;
+    padding: 5px;    
+}
+
+/*diseño de los enlaces*/
+
+a{
+    text-decoration: none;
+    color: rgb(37, 35, 35);
+}
+td a:hover{
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid white;
+    transition: all 0.2s ease;
+}
+
+/*diseño del enlace editar*/
+.aEdit:hover{
+    box-shadow: 0 0 5px rgb(128, 240, 144);
+
+}
+
+/*diseño del boton eliminar*/
+.btnDelete:hover{
+    box-shadow: 0 0 5px rgb(224, 87, 87);
+}
+
+/*div con la tabla*/
+.divContentInfo{
+    margin-top: 60px;
+}
+
+/*diseño del boton agregar*/
+.divAgregar{
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+/*btn al pasar el mouse*/
+.divAgregar a{
+    background-color: transparent;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    box-shadow: 0 0 4px ghostwhite;
+}
+
+.divAgregar a:hover{
+    box-shadow: 0 0 6px ghostwhite;
+
+}
+
+.divBtn{
+    padding-left: 10px;
+}
+
+/*Diseño del text-area de agregar*/
+.atxtDescription{
+    height: 200px;
+    margin-top: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 5px wheat;
+    padding: 10px;
+    border:none;
+}
+.atxtDescription:focus{
+    outline: transparent;
+    box-shadow: 0 0 10px wheat;
+}
+
+/*boton de cancelar*/
+.btnCancelar{
+    width: auto;
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 3px;
+    box-shadow: 0 0 3px ghostwhite;
+    margin-top: 20px;
+    
+}
+
+
+
+.btnCancelar:hover{
+    box-shadow: 0 0 6px ghostwhite;
+}
+
+/*diseño del boton volver en la pagina de DETALLES*/
+.btnVolver{
+    width: 80px;
+    background-color: transparent;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 25px;
+    padding: 5px;
+    box-shadow: 0 0 15px rgb(218, 192, 192);
+    text-align: center;
+    
+}
+
+
+
+.btnVolver:hover{
+    box-shadow: 0 0 6px ghostwhite;
+    background-color: rgba(122, 124, 124, 0.527);
+}
+
+.btnVolverCategoria{
+    margin-left: 20px;
+}
+
+
+
+/*-------------------------------------------------------------------------*/
+
+/*DISEÑO DEL FORMULARIO DE EDITAR*/
+
+/*Formulario*/
+.frmEditar, .frmNoticia{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*inputs del formulario*/
+.InputsEditar{
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid black;
+    text-align: center;
+    font-size: 15px;
+}
+
+.InputsEditar:hover{
+    display: inline-block;
+    field-sizing: content;
+}
+
+/*diseño al hacer click en los inputs*/
+.InputsEditar:focus{
+    outline-color:transparent;
+    border: none;
+}
+
+/*diseño del textarea*/
+.atxtDescriptionEditar{
+    background-color: transparent;
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+    padding:10px;
+    margin: 20px;
+    border-color: rgb(245, 229, 200);
+}
+/*text area al pasar el mouse*/
+.atxtDescriptionEditar:hover{
+    box-shadow: 0 0 5px wheat;
+}
+/*text area al hacer click*/
+.atxtDescriptionEditar:focus{
+    outline:transparent;
+}
+
+/*diseño del boton para actualizar la info*/
+.InputEditarSubmit{
+    height: 35px;
+    background-color: ghostwhite;
+    border-radius: 20px;
+    border: none;
+}
+
+.InputEditarSubmit:hover{
+    box-shadow: 0 0 5px ghostwhite;
+}
+
+input::placeholder{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color:rgb(6, 6, 6);
+    text-align: center;
+    
+}
+
+textarea::placeholder{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    color:rgb(6, 6, 6);
+    text-align: center;
+}
+
+select{
+
+    font-family: sans-serif;
+    color:black;
+    padding: 5px;
+    margin: 6px;
+    border-radius: 20px;
+    background-color:rgb(211, 209, 207);
+    box-shadow: -1px -1px 3px rgb(194, 188, 188), 2px 2px 3px rgb(7, 7, 7);
+
+}
+select:focus{
+    outline-color: transparent;
+    border: none;
+
+}
+
+select:disabled{
+    appearance: none;
+
+}
+ .InputsEditarCategoria{
+    margin: 10px;
+   /* background-color: transparent;*/
+    border: none;
+    border-bottom:1px solid black;
+    text-align: center;
+    font-size: 18px;
+ }

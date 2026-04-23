@@ -1,0 +1,34 @@
+// Cargar datos y enviar actualización
+function cargarDatos() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    fetch(`../controlador/cntBeneficiosController.php?action=get&idBeneficio=${id}`)
+      .then(r=>r.json())
+      .then(d=>{
+        if(!d.success) { alert('No encontrado'); return; }
+        const u = d.data;
+        document.getElementById('beneficioId').value = u.idBeneficio;
+        document.getElementById('nombreBeneficio').value = u.nombreBeneficio || '';
+        document.getElementById('idTipoBeneficio').value = u.idTipoBeneficio || 0;
+        document.getElementById('descuento').value = u.descuento || 0;
+        document.getElementById('descBeneficio').value = u.descBeneficio || '';
+        document.getElementById('idCategoriaBeneficio').value = u.idCategoriaBeneficio || 0;
+        const img = document.getElementById('imagenBeneficioActual');
+        if (img && u.imgBeneficioP) img.src = `../controlador/cntBeneficiosController.php?action=image&name=${u.imgBeneficioP}`;
+      });
+}
+// Submit edición
+document.getElementById('frmEditarBeneficio').addEventListener('submit', e => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    fd.append('action','update');
+    fetch('../controlador/cntBeneficiosController.php', { method:'POST', body: fd })
+        .then(r=>r.json())
+        .then(resp=>{
+            if(resp.success){ alert('Beneficio Actualizado'); window.location.href='vtaBeneficios.php'; }
+            else { alert(resp.message || 'Error al actualizar'); }
+        });
+});
+
+
+document.addEventListener('DOMContentLoaded', cargarDatos);
