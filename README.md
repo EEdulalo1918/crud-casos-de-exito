@@ -20,6 +20,7 @@ de usuarios y operaciones CRUD completas.
 
 ```
 CRUD/
+├── Assets/                 # Imagenes del proyecto
 ├── Beneficios/             # Módulo de beneficios (CRUD completo)
 ├── BolsaUniversitaria/     # Módulo de bolsa universitaria (CRUD completo)
 ├── CasosdeExito/           # Módulo de casos de éxito (CRUD completo)
@@ -94,6 +95,44 @@ El sistema cuenta con autenticación de usuarios. Para ingresar se requiere un n
 | Comentarios | Ver, Ver detalles |
 
 ---
+# CRUD Casos de Éxito
+
+## Vista del proyecto
+
+<h3>Login</h3>
+<img src="./assets/screenshots/login.png" width="900">
+
+<h3>Inicio</h3>
+<img src="./assets/screenshots/inicio.png" width="900">
+
+<h3>Casos de Éxito</h3>
+<img src="./assets/screenshots/casos_de_exito.png" width="900">
+
+<h3>Recuerdos</h3>
+<img src="./assets/screenshots/recuerdos.png" width="900">
+
+<h3>Noticias</h3>
+<img src="./assets/screenshots/noticias.png" width="900">
+
+<h3>Eventos</h3>
+<img src="./assets/screenshots/eventos.png" width="900">
+
+<h3>Categoria Beneficios</h3>
+<img src="./assets/screenshots/categoria_de_beneficios.png" width="900">
+
+<h3>Beneficios</h3>
+<img src="./assets/screenshots/beneficios.png" width="900">
+
+<h3>Bolsa Universitaria</h3>
+<img src="./assets/screenshots/bolsa.png" width="900">
+
+<h3>Cometarios</h3>
+<img src="./assets/screenshots/comentarios.png" width="900">
+
+
+
+
+
 
 ## Autor
 
