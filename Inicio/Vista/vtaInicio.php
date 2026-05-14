@@ -58,7 +58,7 @@
 
             <!-- Tarjeta 2 -->
             <article class="Card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Ciudad_del_Conocimiento_de_la_UAEH._64.jpg/640px-Ciudad_del_Conocimiento_de_la_UAEH._64.jpg"
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG2LzhBS6UtdMCy2s4dL2cdJFweRzpnRV4ZaK3-M-hn2pCbkszTMFaTr1-OgwbbMTP0PUrILk1fuYtA0niDanSwjM_AYiQAUTz_Crw8J3UQzI1dq4jRnDDAs7Fss5Mr9FRAHS6ZmA=s1360-w1360-h1020-rw"
                     alt="CEDAI-Instalaciones" class="CardImg">
                 <div class="CardBody">
                     <h3 class="CardTitle">La credencial</h3>
